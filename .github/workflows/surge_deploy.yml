@@ -30,7 +30,7 @@ jobs:
         with:
           node-version: 12
         
-      - name: Install Yalm
+      - name: Install Yarn
         uses:  bolares/actions-yarn@v2.0.0
         with:
           cmd: install
@@ -46,4 +46,4 @@ jobs:
          run:  npm install --globally surge
        
       - name: Deploy to Surge  
-        run: surge ./build adnanwa.surge.su ${{secrets.Surge_Token}} 
+        run: surge ./build adnanwa.surge.sh ${{secrets.Surge_Token}} 
