@@ -43,7 +43,7 @@ jobs:
         run: yarn build
       
       -  name: Install Surge
-         run:  npm install --globally surge
+         run:  npm install -g surge
        
       - name: Deploy to Surge  
         run: surge ./build adnanwa.surge.sh ${{secrets.Surge_Token}} 
